@@ -11,6 +11,7 @@ thanx-agent-starter/
 │   └── CLAUDE.md                      # Global instructions -> symlinked to ~/.claude/CLAUDE.md
 ├── agents/
 │   └── skills/                        # Personal skills -> symlinked to ~/.claude/skills/
+│       ├── disk-cleanup/SKILL.md
 │       ├── improve/SKILL.md
 │       ├── handoff/SKILL.md
 │       ├── knowledge/SKILL.md

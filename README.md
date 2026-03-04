@@ -29,7 +29,7 @@ cd thanx-agent-starter
 $EDITOR global/CLAUDE.md      # Your identity, preferences, org context
 ```
 
-Then start using Claude Code in any project. The skills are available everywhere via `/improve`, `/handoff`, `/knowledge`, `/write-skill`, and `/sync-upstream`.
+Then start using Claude Code in any project. The skills are available everywhere via `/disk-cleanup`, `/improve`, `/handoff`, `/knowledge`, `/write-skill`, and `/sync-upstream`.
 
 ## What Is Included
 
@@ -37,6 +37,7 @@ Then start using Claude Code in any project. The skills are available everywhere
 
 | Skill | Purpose |
 |-------|---------|
+| `/disk-cleanup` | Scan local disk for large storage consumers and identify cleanup opportunities. Read-only by default, never deletes without approval. |
 | `/improve` | End-of-session learning loop. Extracts friction points, proposes skill improvements, captures knowledge. The compounding mechanism. |
 | `/handoff` | Generates structured context prompts for transferring work between agent sessions or repos. |
 | `/knowledge` | Manages a structured knowledge base for facts, patterns, and insights that persist across sessions. |
@@ -62,6 +63,7 @@ thanx-agent-starter/
 │   └── CLAUDE.md                      # Template -> symlinked to ~/.claude/CLAUDE.md
 ├── agents/
 │   └── skills/                        # Core skills -> symlinked to ~/.claude/skills/
+│       ├── disk-cleanup/SKILL.md
 │       ├── improve/SKILL.md
 │       ├── handoff/SKILL.md
 │       ├── knowledge/SKILL.md

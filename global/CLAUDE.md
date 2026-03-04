@@ -73,6 +73,7 @@ These skills are available globally via the agents/skills/ directory (symlinked 
 
 | Skill | When to Use |
 |-------|-------------|
+| `/disk-cleanup` | Scan local disk for large storage consumers and identify cleanup opportunities. Read-only by default, never deletes without approval. |
 | `/improve` | End of any substantive session. Extracts learnings, proposes skill improvements, captures knowledge. |
 | `/handoff` | When context needs to transfer between agent threads or repos. Generates structured handoff prompts. |
 | `/knowledge` | Managing the project knowledge base. Subcommands: init, add, update, or status check. |
