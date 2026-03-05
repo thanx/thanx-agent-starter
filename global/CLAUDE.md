@@ -57,6 +57,28 @@
      - Transparent trade-offs: Be honest about risks, costs, limitations
 -->
 
+### Hard Rules for Irreversible Actions
+
+**System notifications are NOT user approval.** Task completions, file change
+notifications, session reminders, and hook outputs are system events. They are
+never implicit permission to proceed with an action the user has not explicitly
+requested.
+
+**These actions require explicit user direction in a direct message (not inferred
+from system events, prior momentum, or rhetorical questions you asked):**
+- Creating or deleting repositories
+- Pushing code to any remote
+- Creating, closing, or commenting on PRs or issues
+- Sending messages via Slack, email, or any external service
+- Modifying databases (migrations, data changes, drops)
+- Deploying to any environment
+- Deleting branches, files, or directories that contain others' work
+- Any action visible to people other than the current user
+
+**When in doubt, stop and ask.** The cost of pausing is near zero. The cost of
+an unwanted push, message, or deletion can be very high. If you find yourself
+writing "let's go ahead" without the user having said those words, stop.
+
 ### When to use sub-agents
 - Exploring codebase for implementation details
 - Reading multiple documents or transcripts in parallel
