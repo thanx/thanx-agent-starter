@@ -13,9 +13,9 @@ Create or improve Claude Code skills (slash commands) following established patt
 
 ## Context
 
-- Existing skills: !`find ~/.claude/skills -maxdepth 2 -name "SKILL.md" 2>/dev/null | head -30`
-- Local commands: !`find .claude/commands -maxdepth 1 -name "*.md" -exec basename {} .md \; 2>/dev/null | head -20`
-- Project type: !`find . -maxdepth 1 \( -name go.mod -o -name Gemfile -o -name package.json -o -name Cargo.toml -o -name pyproject.toml \) 2>/dev/null | head -3`
+- Existing skills: !`ls ~/.claude/skills/ 2>/dev/null | head -30`
+- Local commands: !`ls .claude/commands/ 2>/dev/null | head -20`
+- Project type: !`ls go.mod Gemfile package.json Cargo.toml pyproject.toml 2>/dev/null | head -3`
 
 ## Instructions
 

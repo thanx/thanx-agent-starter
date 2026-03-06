@@ -248,6 +248,39 @@ Only report gaps that are actionable and non-trivial. Do not flag every passing 
 
 **Note:** The `/improve` skill itself is in scope for improvement. If this session revealed friction in the improve workflow, include it in the report.
 
+### Step 9: Upstream Sharing Assessment
+
+After all improvements are identified, assess which could benefit other engineers beyond this personal repo. Not everything is personal -- some fixes and patterns are generic.
+
+For each improvement applied or proposed in this session, classify:
+
+- **Personal** -- References specific people, org context, personal preferences, or data unique to this user. Stays in the personal repo. Examples: org-specific skills, voice profiles, personal workflow triggers.
+- **Upstream starter** -- A generic fix or pattern that every engineer who forks the starter scaffold would benefit from. Generate a handoff prompt targeting the starter repo. Examples: dynamic context fixes, skill authoring improvements, /improve enhancements, knowledge base patterns.
+- **Team-wide plugin** -- A team-specific workflow that belongs in the shared plugin marketplace. Generate a handoff prompt targeting the team plugin repo. Examples: investigation patterns, review workflows, deployment skills.
+
+**Decision criteria:**
+- If the improvement works without any org-specific context, it is probably upstream starter material
+- If it requires team-specific MCP tools, codebase knowledge, or conventions, it is team-wide plugin material
+- If it references specific people, roles, meetings, or personal preferences, it is personal
+- When in doubt, keep it personal. It is easy to promote later, hard to retract.
+
+**Report format:**
+
+```
+## Upstream Sharing Assessment
+
+### Candidates for upstream starter
+- **[improvement]** -- [why it is generic]
+
+### Candidates for team-wide plugin
+- **[improvement]** -- [why it is team-wide]
+
+### Personal only
+- **[improvement]** -- [why it is personal]
+```
+
+Generate handoff prompts for any upstream candidates the user approves. Use the same format as Step 5 handoffs.
+
 ## What NOT to Improve
 
 - Do not add session-specific details (specific file paths, query results)
@@ -317,6 +350,19 @@ Updated context/knowledge/index.md:
 
 ### Stale Coverage
 - `context/ordering-positioning.md` -- exists but not in coverage map
+
+## Upstream Sharing Assessment
+
+### Candidates for upstream starter
+- **write-skill dynamic context fix** -- generic, every fork inherits broken find commands
+
+### Candidates for team-wide plugin
+- (none this session)
+
+### Personal only
+- **Custom workflow skill** -- references specific org context
+
+Handoff prompt for starter repo generated below.
 
 ## Apply all? (y/n)
 ```
