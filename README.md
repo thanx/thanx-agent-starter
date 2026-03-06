@@ -15,6 +15,28 @@ The core skills and patterns originated from [Darren Cheng's](https://github.com
 - **Start personal, promote when ready.** Build skills for yourself first. When something proves universal, contribute it back to the core.
 - **Steal freely.** Browse other people's forks for ideas. Copy what works. Adapt it. No permission needed.
 
+## The Three-Layer Model
+
+Before you fork, understand where skills live. This mental model prevents the most common mistake — dumping everything into your personal repo and wondering why project-specific skills don't transfer.
+
+```
+┌─────────────────────────────────────────────────┐
+│  Layer 3: Team-wide (thanx-claude-plugins)      │
+│  Standards everyone follows. Shared reviews,    │
+│  investigation workflows, ops patterns.         │
+├─────────────────────────────────────────────────┤
+│  Layer 2: Project-specific (.claude/commands/)  │
+│  Skills tied to a specific codebase. Deploy     │
+│  scripts, test runners, project conventions.    │
+├─────────────────────────────────────────────────┤
+│  Layer 1: Personal (this repo)                  │
+│  YOUR workflow, preferences, automation.        │
+│  /improve, /handoff, voice profile, knowledge.  │
+└─────────────────────────────────────────────────┘
+```
+
+**Start at layer 1.** Build skills for yourself. When something proves useful beyond your personal workflow, promote it to layer 2 (project) or layer 3 (team). This repo is your layer 1.
+
 ## Quick Start
 
 ```bash
@@ -98,16 +120,6 @@ The core workflow:
 5. Next session starts with a better system
 
 This is the compounding mechanism. Without it, skills are static markdown. With it, every session makes the system smarter.
-
-### The Three-Layer Model
-
-Skills naturally fall into three layers:
-
-1. **Personal** (this repo) — Your workflow, your preferences, your automation
-2. **Project-specific** (`.claude/commands/` in each project) — Skills tied to a specific codebase
-3. **Team-wide** (thanx-claude-plugins) — Standards everyone should follow
-
-Start at layer 1. When a skill proves useful beyond your personal workflow, promote it.
 
 ## Staying Current with Core
 
