@@ -51,7 +51,7 @@ cd thanx-agent-starter
 $EDITOR global/CLAUDE.md      # Your identity, preferences, org context
 ```
 
-Then start using Claude Code in any project. The skills are available everywhere via `/disk-cleanup`, `/improve`, `/handoff`, `/knowledge`, `/write-skill`, and `/sync-upstream`.
+Then start using Claude Code in any project. The skills are available everywhere via `/disk-cleanup`, `/improve`, `/handoff`, `/knowledge`, `/write-skill`, `/sync-upstream`, `/browse-skills`, and `/register-repo`.
 
 ## What Is Included
 
@@ -65,6 +65,8 @@ Then start using Claude Code in any project. The skills are available everywhere
 | `/knowledge` | Manages a structured knowledge base for facts, patterns, and insights that persist across sessions. |
 | `/write-skill` | Skill authoring guide with platform conventions, gotchas, and validation. Makes your first custom skill work correctly. |
 | `/sync-upstream` | Checks the upstream scaffold for improvements and helps you incorporate them into your fork. |
+| `/browse-skills` | Browse skills from all repos in the central ecosystem registry. Discover and adopt without cloning. |
+| `/register-repo` | Register this repo in the central skill ecosystem registry via PR. Makes your skills discoverable. |
 
 ### Templates
 
@@ -90,11 +92,16 @@ thanx-agent-starter/
 │       ├── handoff/SKILL.md
 │       ├── knowledge/SKILL.md
 │       ├── write-skill/SKILL.md
-│       └── sync-upstream/SKILL.md
+│       ├── sync-upstream/SKILL.md
+│       ├── browse-skills/SKILL.md    # Browse skills from ecosystem
+│       └── register-repo/SKILL.md    # Register repo in central list
 ├── context/
 │   ├── voice-profile.md              # Instructions for generating yours
 │   └── knowledge/
 │       └── index.md                   # Empty knowledge base registry
+├── community/
+│   ├── repo-list.yaml                # Central skill repo registry
+│   └── README.md                     # Ecosystem documentation
 └── .gitignore
 ```
 
@@ -165,3 +172,39 @@ NOT good candidates for upstream:
 ## License
 
 Internal to Thanx. Fork freely within the organization.
+
+## Skill Ecosystem
+
+This starter participates in a decentralized skill-sharing ecosystem. Everyone's personal repo
+can be discovered by others — no central authority needed, just a shared list.
+
+### Central Repo-List
+
+`community/repo-list.yaml` lists all known skill repos. Anyone can add theirs via PR.
+
+### Discovering Others' Skills
+
+```bash
+/browse-skills          # Browse skills from all registered repos (no cloning needed)
+/register-repo          # Register your repo in the central list via PR
+```
+
+### Current Registry
+
+| Repo | Owner | Type | Description |
+|------|-------|------|-------------|
+| [thanx-cortex](https://github.com/thanx/thanx-cortex) | Thanx Engineering | hub | Org-wide engineering toolkit |
+| [kosmin-claude-skills](https://github.com/thanx/kosmin-claude-skills) | Kosmin | marketplace | Discovery, curation, distribution |
+| [anutron-claude-skills](https://github.com/anutron/claude-skills) | Aaron | Personal | Bug-bash, fixit, improve |
+| [drn-dots](https://github.com/drn/dots) | Darren | claude-dir | Original Claude skills |
+
+### Centralization Flow
+
+When 3+ people have similar skills, they're candidates for promotion to `thanx-cortex`:
+
+1. Build skills in your personal repo
+2. Others discover them via `/browse-skills`
+3. When a skill proves universal, push it to `thanx-cortex` as a PR
+4. Everyone benefits from the centralized version
+
+See `community/README.md` for full details.
