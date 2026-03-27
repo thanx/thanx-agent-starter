@@ -1,0 +1,61 @@
+# Skill Repo Registry
+#
+# Central list of known skill repos across the organization.
+# Anyone can add their repo by opening a PR to this file.
+#
+# This list is a DISCOVERY AID, not a mandate. Each person's local
+# snoop-sources or config file is authoritative for their own setup.
+#
+# How discovery works:
+#   1. You fork thanx-agent-starter and build your own skills
+#   2. You add your repo here via PR
+#   3. Others discover your skills via /browse-skills or /snoop --fetch-central
+#   4. Skills that appear in 3+ repos are candidates for centralizing into thanx-cortex
+#
+# Repo types:
+#   hub:         A centralized team repo (thanx-cortex) — curated, org-wide skills
+#   marketplace: A personal repo with marketplace structure (provenance tracking, push/pull)
+#   personal:    Someone's personal skill repo (fork of agent-starter or standalone)
+#   claude-dir:  A repo with skills inside .claude/ (not a dedicated skill repo)
+#
+# Fields:
+#   name:          Human-readable label (typically the repo name)
+#   owner:         Who maintains this repo
+#   remote:        Git SSH URL
+#   type:          hub | marketplace | personal | claude-dir
+#   description:   What this repo focuses on
+#   skills_path:   Where skills live (default: agents/skills/)
+#   registered_at: ISO date when this entry was added
+
+repos:
+  - name: "thanx-cortex"
+    owner: "Thanx Engineering"
+    remote: "git@github.com:thanx/thanx-cortex.git"
+    type: hub
+    description: "Org-wide engineering toolkit — 15+ skill domains, 36+ agents, production workflows"
+    skills_path: "skills/"
+    registered_at: "2026-03-27"
+
+  - name: "kosmin-claude-skills"
+    owner: "Kosmin"
+    remote: "git@github.com:thanx/kosmin-claude-skills.git"
+    type: marketplace
+    description: "Personal skill marketplace — discovery (/snoop), curation, distribution (/push-skill)"
+    skills_path: "skills/"
+    registered_at: "2026-03-27"
+
+  - name: "anutron-claude-skills"
+    owner: "Aaron"
+    remote: "git@github.com:anutron/claude-skills.git"
+    type: personal
+    description: "Personal skills — bug-bash, fixit, improve, and more"
+    skills_path: "skills/"
+    registered_at: "2026-03-27"
+
+  - name: "drn-dots"
+    owner: "Darren"
+    remote: "git@github.com:drn/dots.git"
+    type: claude-dir
+    description: "Darren's dotfiles — the original Claude skills that inspired this ecosystem"
+    skills_path: ".claude/skills/"
+    registered_at: "2026-03-27"
