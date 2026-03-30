@@ -71,6 +71,8 @@ Then start using Claude Code in any project. The skills are available everywhere
 | File | Purpose |
 |------|---------|
 | `global/CLAUDE.md` | Your global instructions, loaded into every conversation. Fill in your context. |
+| `global/settings.json` | Default permission sandboxing. Allows reads, blocks destructive ops, prompts for everything else. |
+| `global/PERMISSIONS.md` | Explains the allow/deny model and how to customize permissions. |
 | `context/voice-profile.md` | Instructions for generating a writing voice profile from your emails and messages. |
 | `context/knowledge/index.md` | Empty knowledge base registry. Grows as you capture learnings. |
 
@@ -82,7 +84,9 @@ thanx-agent-starter/
 ├── CLAUDE.md                          # Instructions for working IN this repo
 ├── setup.sh                           # Creates symlinks to ~/.claude/
 ├── global/
-│   └── CLAUDE.md                      # Template -> symlinked to ~/.claude/CLAUDE.md
+│   ├── CLAUDE.md                      # Template -> symlinked to ~/.claude/CLAUDE.md
+│   ├── settings.json                  # Permission defaults -> symlinked to ~/.claude/settings.json
+│   └── PERMISSIONS.md                 # Explains the allow/deny model
 ├── agents/
 │   └── skills/                        # Core skills -> symlinked to ~/.claude/skills/
 │       ├── disk-cleanup/SKILL.md
@@ -102,12 +106,13 @@ thanx-agent-starter/
 
 ### The Symlink Model
 
-The setup script creates two symlinks:
+The setup script creates three symlinks:
 
 - `~/.claude/CLAUDE.md` -> `<your-repo>/global/CLAUDE.md`
 - `~/.claude/skills/` -> `<your-repo>/agents/skills/`
+- `~/.claude/settings.json` -> `<your-repo>/global/settings.json`
 
-This means your global instructions and skills are version-controlled in your fork, but Claude Code picks them up automatically in every project.
+This means your global instructions, skills, and permission defaults are version-controlled in your fork, but Claude Code picks them up automatically in every project.
 
 ### The Improve Loop
 

@@ -79,6 +79,37 @@ else
     echo "Created skills symlink."
 fi
 
+# --- settings.json symlink ---
+SETTINGS_TARGET="$REPO_DIR/global/settings.json"
+SETTINGS_LINK="$CLAUDE_DIR/settings.json"
+
+if [ -L "$SETTINGS_LINK" ]; then
+    CURRENT_TARGET="$(readlink "$SETTINGS_LINK")"
+    if [ "$CURRENT_TARGET" = "$SETTINGS_TARGET" ]; then
+        echo "settings.json symlink already correct."
+    else
+        echo "settings.json symlink exists but points to: $CURRENT_TARGET"
+        read -p "Replace with link to this repo? (y/n) " -n 1 -r
+        echo
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+            rm "$SETTINGS_LINK"
+            ln -s "$SETTINGS_TARGET" "$SETTINGS_LINK"
+            echo "  Updated settings.json symlink."
+        else
+            echo "  Skipped settings.json symlink."
+        fi
+    fi
+elif [ -f "$SETTINGS_LINK" ]; then
+    BACKUP="$SETTINGS_LINK.backup.$(date +%Y%m%d%H%M%S)"
+    echo "Existing settings.json found (not a symlink). Backing up to: $BACKUP"
+    mv "$SETTINGS_LINK" "$BACKUP"
+    ln -s "$SETTINGS_TARGET" "$SETTINGS_LINK"
+    echo "  Created settings.json symlink. Original backed up."
+else
+    ln -s "$SETTINGS_TARGET" "$SETTINGS_LINK"
+    echo "Created settings.json symlink."
+fi
+
 echo ""
 echo "Setup complete. Your skills are now available in every Claude Code session:"
 echo ""

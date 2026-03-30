@@ -124,6 +124,7 @@ This repo is the source of truth for global configuration and personal skills.
 
 - **Global CLAUDE.md**: `global/CLAUDE.md` (this file, symlinked to `~/.claude/CLAUDE.md`)
 - **Skills directory**: `agents/skills/` (symlinked to `~/.claude/skills/`)
+- **Permissions**: `global/settings.json` (symlinked to `~/.claude/settings.json`)
 - **Knowledge base**: `context/knowledge/`
 - **Voice profile**: `context/voice-profile.md`
 

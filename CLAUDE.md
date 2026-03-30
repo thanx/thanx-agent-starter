@@ -8,7 +8,9 @@ Personal AI workflow repo. Contains global Claude Code configuration, personal s
 thanx-agent-starter/
 ├── CLAUDE.md                          # This file (repo-level instructions)
 ├── global/
-│   └── CLAUDE.md                      # Global instructions -> symlinked to ~/.claude/CLAUDE.md
+│   ├── CLAUDE.md                      # Global instructions -> symlinked to ~/.claude/CLAUDE.md
+│   ├── settings.json                  # Permission defaults -> symlinked to ~/.claude/settings.json
+│   └── PERMISSIONS.md                 # Explains the allow/deny model
 ├── agents/
 │   └── skills/                        # Personal skills -> symlinked to ~/.claude/skills/
 │       ├── disk-cleanup/SKILL.md
@@ -29,10 +31,19 @@ Run `./setup.sh` or manually create:
 
 - `~/.claude/CLAUDE.md` symlinked to `global/CLAUDE.md`
 - `~/.claude/skills/` symlinked to `agents/skills/`
+- `~/.claude/settings.json` symlinked to `global/settings.json`
+
+## Sandboxing Defaults
+
+This starter ships with conservative permission defaults in `global/settings.json` (symlinked to `~/.claude/settings.json` by `setup.sh`). The model: allow reads, block destructive operations, prompt for everything in between. See `global/PERMISSIONS.md` for the full explanation and customization guide.
 
 ## Working With Skills
 
 Skills follow the Claude Code SKILL.md format. See `/write-skill` for the authoring guide.
+
+### Least-Privilege Tool Access
+
+Skills should declare only the tools they need in `allowed-tools`. A read-only research skill should not have write access. A reporting skill should not have message-send access. Narrow tool access limits the blast radius when a skill misbehaves.
 
 ### Dynamic Context Rules (Critical)
 

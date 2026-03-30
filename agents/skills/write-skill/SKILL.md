@@ -152,6 +152,7 @@ Use `2>/dev/null` to suppress stderr, but **it does not fix exit codes**. When a
 7. **Avoid contractions.** Words like "don't" or "can't" can break due to single-quote shell interpretation.
 8. **Match specificity to fragility.** Give high freedom for flexible tasks, exact commands for fragile operations.
 9. **Use `disable-model-invocation: true`** for skills with side effects (deploy, merge, send).
+10. **Least-privilege `allowed-tools`.** Only declare the tools a skill actually needs. A read-only research skill should not have write access. A reporting skill should not have message-send access. If a skill does not need Bash at all, do not include it. Narrow tool access limits the blast radius when a skill misbehaves.
 
 ---
 
