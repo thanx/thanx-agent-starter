@@ -51,7 +51,7 @@ cd thanx-agent-starter
 $EDITOR global/CLAUDE.md      # Your identity, preferences, org context
 ```
 
-Then start using Claude Code in any project. The skills are available everywhere via `/disk-cleanup`, `/improve`, `/handoff`, `/knowledge`, `/write-skill`, and `/sync-upstream`.
+Then start using Claude Code in any project. The skills are available everywhere via `/disk-cleanup`, `/improve`, `/handoff`, `/knowledge`, `/write-skill`, `/sync-upstream`, `/browse-skills`, and `/register-repo`.
 
 ## What Is Included
 
@@ -65,6 +65,8 @@ Then start using Claude Code in any project. The skills are available everywhere
 | `/knowledge` | Manages a structured knowledge base for facts, patterns, and insights that persist across sessions. |
 | `/write-skill` | Skill authoring guide with platform conventions, gotchas, and validation. Makes your first custom skill work correctly. |
 | `/sync-upstream` | Checks the upstream scaffold for improvements and helps you incorporate them into your fork. |
+| `/browse-skills` | Discover and adopt skills from the central skill ecosystem. Reads the repo-list, scans repos via GitHub API. |
+| `/register-repo` | Register your skill repository in the central ecosystem repo-list via an automated PR. |
 
 ### Templates
 
@@ -94,7 +96,12 @@ thanx-agent-starter/
 │       ├── handoff/SKILL.md
 │       ├── knowledge/SKILL.md
 │       ├── write-skill/SKILL.md
-│       └── sync-upstream/SKILL.md
+│       ├── sync-upstream/SKILL.md
+│       ├── browse-skills/SKILL.md
+│       └── register-repo/SKILL.md
+├── community/
+│   ├── repo-list.yaml                 # Central registry of known skill repos
+│   └── README.md                      # Ecosystem docs
 ├── context/
 │   ├── voice-profile.md              # Instructions for generating yours
 │   └── knowledge/
@@ -152,6 +159,27 @@ git log HEAD..upstream/master --oneline
 One of the most impactful early steps is generating a voice profile — a document that captures how you actually write so Claude can match your style.
 
 See `context/voice-profile.md` for instructions. The short version: point Claude at your last 30 days of outgoing emails and Slack messages, and ask it to extract your writing patterns.
+
+## Skill Ecosystem
+
+This repo hosts the **central repo-list** at `community/repo-list.yaml` — a discovery aid for the
+decentralized skill-sharing ecosystem across Thanx.
+
+### Three-Layer Discovery Model
+
+1. **Personal repos** (`kosmin-claude-skills`, `anutron/claude-skills`, `drn/dots`) — each person's curated skills
+2. **Central repo-list** (this repo: `community/repo-list.yaml`) — discovery aid listing known repos
+3. **Hub** (`thanx-cortex`) — centralized, org-wide skills that benefit everyone
+
+### How to Participate
+
+1. **Fork this repo** and add your own skills
+2. **Register your repo** with `/register-repo` (creates a PR to add it to the repo-list)
+3. **Discover others' skills** with `/browse-skills` (reads the repo-list, scans repos via GitHub API)
+4. **Adopt what you like** into your personal repo
+5. **Centralize organically** — when 3+ people share similar skills, promote to thanx-cortex
+
+See `community/README.md` for full details.
 
 ## Contributing Back
 
