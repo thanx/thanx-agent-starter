@@ -60,6 +60,17 @@ repos:
     added_at: "2026-03-31"
     added_by: "kosmin"
 
+  - name: "jbarson-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/jbarson-claude-skills.git"
+    owner: "jbarson"
+    description: "Jon's personal skill marketplace"
+    skill_paths:
+      - "skills/"
+      - "agents/"
+    added_at: "2026-04-02"
+    added_by: "jbarson"
+
   - name: "drn-dots"
     type: claude-dir
     remote: "git@github.com:drn/dots.git"
