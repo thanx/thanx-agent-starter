@@ -60,6 +60,17 @@ repos:
     added_at: "2026-03-31"
     added_by: "kosmin"
 
+  - name: "jbarson-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/jbarson-claude-skills.git"
+    owner: "jbarson"
+    description: "Jon's personal skill marketplace"
+    skill_paths:
+      - "skills/"
+      - "agents/"
+    added_at: "2026-04-02"
+    added_by: "jbarson"
+
   - name: "drn-dots"
     type: claude-dir
     remote: "git@github.com:drn/dots.git"
@@ -79,3 +90,13 @@ repos:
       - "skills/"
     added_at: "2026-04-02"
     added_by: "bertan"
+    
+  - name: "rstojano-claude-skills"
+    type: agents-dir
+    remote: "git@github.com:thanx/rstojano-claude-skills.git"
+    owner: "rstojano"
+    description: "Robert's AI workflow toolkit — skill authoring, knowledge management, disk cleanup, context handoff, and ecosystem browsing"
+    skill_paths:
+      - "agents/skills/"
+    added_at: "2026-04-02"
+    added_by: "rstojano"
