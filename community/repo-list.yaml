@@ -69,3 +69,13 @@ repos:
       - ".claude/skills/"
     added_at: "2026-03-31"
     added_by: "kosmin"
+
+  - name: "rstojano-claude-skills"
+    type: agents-dir
+    remote: "git@github.com:thanx/rstojano-claude-skills.git"
+    owner: "rstojano"
+    description: "Robert's AI workflow toolkit — skill authoring, knowledge management, disk cleanup, context handoff, and ecosystem browsing"
+    skill_paths:
+      - "agents/skills/"
+    added_at: "2026-04-02"
+    added_by: "rstojano"
