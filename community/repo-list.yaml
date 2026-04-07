@@ -81,6 +81,16 @@ repos:
     added_at: "2026-03-31"
     added_by: "kosmin"
 
+  - name: "bertan-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/bertan-claude-skills.git"
+    owner: "bertan"
+    description: "Bertan's personal skill marketplace — browse-skills, disk-cleanup, handoff, improve, knowledge, register-repo, sync-upstream, write-skill"
+    skill_paths:
+      - "skills/"
+    added_at: "2026-04-02"
+    added_by: "bertan"
+    
   - name: "rstojano-claude-skills"
     type: agents-dir
     remote: "git@github.com:thanx/rstojano-claude-skills.git"
