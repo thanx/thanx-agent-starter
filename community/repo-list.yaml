@@ -90,7 +90,7 @@ repos:
       - "skills/"
     added_at: "2026-04-02"
     added_by: "bertan"
-    
+
   - name: "rstojano-claude-skills"
     type: agents-dir
     remote: "git@github.com:thanx/rstojano-claude-skills.git"
@@ -100,3 +100,13 @@ repos:
       - "agents/skills/"
     added_at: "2026-04-02"
     added_by: "rstojano"
+
+  - name: "steve-thanx-claude-skills"
+    type: personal
+    remote: "git@github.com:thanx/steve-thanx-claude-skills.git"
+    owner: "steve-thanx"
+    description: "Steve's personal skill repo"
+    skill_paths:
+      - "skills/"
+    added_at: "2026-04-02"
+    added_by: "steve-thanx"
