@@ -90,7 +90,7 @@ repos:
       - "skills/"
     added_at: "2026-04-02"
     added_by: "bertan"
-    
+
   - name: "rstojano-claude-skills"
     type: agents-dir
     remote: "git@github.com:thanx/rstojano-claude-skills.git"
@@ -100,3 +100,14 @@ repos:
       - "agents/skills/"
     added_at: "2026-04-02"
     added_by: "rstojano"
+
+  - name: "yun-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/yun-claude-skills.git"
+    owner: "yunw"
+    description: "Yun's personal skill toolkit — PR review (6-agent multi-perspective), CI triage, CI monitoring, kick-off prep"
+    skill_paths:
+      - "providers/claude/commands/"
+      - "skills/"
+    added_at: "2026-04-10"
+    added_by: "yunw"
