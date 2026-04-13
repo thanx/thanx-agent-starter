@@ -62,7 +62,7 @@ repos:
 
   - name: "jbarson-claude-skills"
     type: marketplace
-    remote: "git@github.com:thanx/jbarson-claude-skills.git"
+    remote: "git@github.com:jbarson/jbarson-claude-skills.git"
     owner: "jbarson"
     description: "Jon's personal skill marketplace"
     skill_paths:
