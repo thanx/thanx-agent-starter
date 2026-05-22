@@ -111,3 +111,14 @@ repos:
       - "skills/"
     added_at: "2026-04-10"
     added_by: "yunw"
+
+  - name: "matthew-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/matthew-claude-skills.git"
+    owner: "matthewzar"
+    description: "Matthew's personal skill marketplace — forked from thanx-agent-starter, curated snoop from kosmin-claude-skills"
+    skill_paths:
+      - "skills/"
+      - "agents/skills/"
+    added_at: "2026-05-22"
+    added_by: "matthewzar"
