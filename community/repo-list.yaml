@@ -62,7 +62,7 @@ repos:
 
   - name: "jbarson-claude-skills"
     type: marketplace
-    remote: "git@github.com:thanx/jbarson-claude-skills.git"
+    remote: "git@github.com:jbarson/jbarson-claude-skills.git"
     owner: "jbarson"
     description: "Jon's personal skill marketplace"
     skill_paths:
@@ -100,7 +100,6 @@ repos:
       - "agents/skills/"
     added_at: "2026-04-02"
     added_by: "rstojano"
-
   - name: "steve-thanx-claude-skills"
     type: personal
     remote: "git@github.com:thanx/steve-thanx-claude-skills.git"
@@ -110,3 +109,13 @@ repos:
       - "skills/"
     added_at: "2026-04-02"
     added_by: "steve-thanx"
+  - name: "yun-claude-skills"
+    type: marketplace
+    remote: "git@github.com:thanx/yun-claude-skills.git"
+    owner: "yunw"
+    description: "Yun's personal skill toolkit — PR review (6-agent multi-perspective), CI triage, CI monitoring, kick-off prep"
+    skill_paths:
+      - "providers/claude/commands/"
+      - "skills/"
+    added_at: "2026-04-10"
+    added_by: "yunw"
