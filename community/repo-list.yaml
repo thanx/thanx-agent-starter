@@ -100,7 +100,15 @@ repos:
       - "agents/skills/"
     added_at: "2026-04-02"
     added_by: "rstojano"
-
+  - name: "steve-thanx-claude-skills"
+    type: personal
+    remote: "git@github.com:thanx/steve-thanx-claude-skills.git"
+    owner: "steve-thanx"
+    description: "Steve's personal skill repo"
+    skill_paths:
+      - "skills/"
+    added_at: "2026-04-02"
+    added_by: "steve-thanx"
   - name: "yun-claude-skills"
     type: marketplace
     remote: "git@github.com:thanx/yun-claude-skills.git"
